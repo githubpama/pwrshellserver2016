@@ -1,0 +1,19 @@
+###################################
+#       Powershell commands       # 
+#       server 2016               #
+#       version 1.0               #
+#       author pama               #
+#       year created 2019         #
+#       last updated 24/01/2019   #
+#       repository githubpama     #
+###################################
+
+#check powershell version
+$PSVersionTable.PSVersion
+
+#To connect to the VM from a host, use the Enter-PSSession cmdlet, as follow
+Enter-PSSession -VMName sql2017test
+
+#The Invoke-Command cmdlet has been updated to perform similar tasks; for example, you can
+#execute a script from the host against the VM, as shown here:
+Invoke-Command -VMName <vmname> -FilePath C:\Scripts\MyTestScript.ps1
